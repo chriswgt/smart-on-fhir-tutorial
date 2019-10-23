@@ -15,7 +15,7 @@
                     type: 'Observation',
                     query: {
                       code: {
-                        $or: ['https://loinc.org|3141-9', 'http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+                        $or: ['http://loinc.org|3141-9', 'http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
                               'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
                       }
@@ -49,6 +49,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
+          p.weight = getQuantityValueAndUnit(weight[0]);
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
